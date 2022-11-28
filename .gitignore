@@ -45,7 +45,7 @@ Thumbs.db
 # MATLAB AUTOSAVE #
 ##################
 *.asv
-*.mat
+*.MATLABDriveTag
 
 # MotionGenesis/Autolev Output and Temp Files
 *_mgTmp*
