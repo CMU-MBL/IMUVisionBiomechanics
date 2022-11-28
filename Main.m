@@ -11,9 +11,9 @@ clear all; close all; clc
 
 % Settings Flags
 doExperimentalData = 1; % if 0, uses synthetic data; if 1, uses sample experimental data
-doDirectCollocationVSUnconstrained = 1; % if 0, performs unconstrained simulations; if 1, performs direct collocation simulations
-chooseDirectCollocationTracking = 2; % if 0, tracks kinematics for validation; if 1, tracks IMUs only; if 2, tracks IMUs and computer vision keypoints (constrained fusion)
-chooseUnconstrainedTracking = 0; % if 0, tracks only computer vision keypoints; if 1, tracks both IMUs and computer vision keypoints (unconstrained fusion)
+doDirectCollocationVSUnconstrained = 0; % if 0, performs unconstrained simulations; if 1, performs direct collocation simulations
+chooseDirectCollocationTracking = 0; % if 0, tracks kinematics for validation; if 1, tracks IMUs only; if 2, tracks IMUs and computer vision keypoints (constrained fusion)
+chooseUnconstrainedTracking = 1; % if 0, tracks only computer vision keypoints; if 1, tracks both IMUs and computer vision keypoints (unconstrained fusion)
 
 % Runs the Selected Simulation
 if(doDirectCollocationVSUnconstrained == 1)
