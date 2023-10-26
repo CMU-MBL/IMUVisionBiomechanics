@@ -4,15 +4,15 @@
 
 % This script allows you to choose settings from which to run each class of
 % simulation contained in the following work (see ReadMe for info):
-% Pearl, O., Shin, S., Godura, A., Bergbreiter, S., & Halilaj, E. (2022). 
-% Fusion of Video and Inertial Sensing Data via Dynamic Optimization of a Biomechanical Model [Preprint]. 
-% Biophysics. https://doi.org/10.1101/2022.11.15.516673
+% Pearl, O., Shin, S., Godura, A., Bergbreiter, S., & Halilaj, E. (2023). 
+% Fusion of video and inertial sensing data via dynamic optimization of a biomechanical model. 
+% Journal of Biomechanics, 155, 111617. https://doi.org/10.1016/j.jbiomech.2023.111617
 clear all; close all; clc
 
 % Settings Flags
 doExperimentalData = 1; % if 0, uses synthetic data; if 1, uses sample experimental data
 doDirectCollocationVSUnconstrained = 0; % if 0, performs unconstrained simulations; if 1, performs direct collocation simulations
-chooseDirectCollocationTracking = 0; % if 0, tracks kinematics for validation; if 1, tracks IMUs only; if 2, tracks IMUs and computer vision keypoints (constrained fusion)
+chooseDirectCollocationTracking = 2; % if 0, tracks kinematics for validation; if 1, tracks IMUs only; if 2, tracks IMUs and computer vision keypoints (constrained fusion)
 chooseUnconstrainedTracking = 1; % if 0, tracks only computer vision keypoints; if 1, tracks both IMUs and computer vision keypoints (unconstrained fusion)
 
 % Runs the Selected Simulation
