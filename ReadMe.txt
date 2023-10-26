@@ -36,16 +36,13 @@ Please see the attached License.txt file for rules on use and redistribution
 (Copyright (c) 2022 Owen Douglas Pearl via MIT License)
 
 When using this work, we ask that you please cite the relevant literature to properly credit the authors:
-Pearl, O., Shin, S., Godura, A., Bergbreiter, S., & Halilaj, E. (2022). 
-Fusion of Video and Inertial Sensing Data via Dynamic Optimization of a Biomechanical Model [Preprint]. 
-Biophysics. https://doi.org/10.1101/2022.11.15.516673
+Pearl, O., Shin, S., Godura, A., Bergbreiter, S., & Halilaj, E. (2023). 
+Fusion of video and inertial sensing data via dynamic optimization of a biomechanical model. 
+Journal of Biomechanics, 155, 111617. https://doi.org/10.1016/j.jbiomech.2023.111617
 
 The sample experimental data is adapted from the Total Capture Dataset:
 Total Capture: 3D Human Pose Estimation Fusing Video and Inertial Sensors
 cvssp.org/data/totalcapture/data/
 
 The direct collocation optimal control problem is transcribed using the OptimTraj toolbox:
-OptimTraj
-Matthew P. Kelly
-May 27, 2016
-https://github.com/MatthewPeterKelly/OptimTraj
+OptimTraj. Matthew P. Kelly. May 27, 2016. https://github.com/MatthewPeterKelly/OptimTraj
