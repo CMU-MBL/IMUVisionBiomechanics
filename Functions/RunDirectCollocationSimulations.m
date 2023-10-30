@@ -132,7 +132,8 @@ switch method
             'TolFun',1e-3,...
             'MaxFunEvals',1e4,...
             'MaxIter', 10e3,...
-            'PlotFcns','optimplotfval');   %options for fmincon
+            'PlotFcns','optimplotfval', ...
+            'FinDiffRelStep', 1e-3); %options for fmincon
         problem.options(1).verbose = 3; % How much to print out?
         problem.options(1).method = 'trapezoid'; % Select the transcription method
         problem.options(1).trapezoid.nGrid = 10;  %method-specific options
@@ -142,9 +143,10 @@ switch method
         problem.options(2).nlpOpt = optimset(...
             'Display','iter',...   % {'iter','final','off'}
             'TolFun',1e-5,...
-            'MaxFunEvals',1e6,...   %options for fmincon
-            'MaxIter', 200,...
-            'PlotFcns','optimplotfval');
+            'MaxFunEvals',1e6,...   
+            'MaxIter', 150,...
+            'PlotFcns','optimplotfval', ...
+            'FinDiffRelStep', 1e-3); %options for fmincon 
         problem.options(2).verbose = 3; % How much to print out
         problem.options(2).method = 'trapezoid'; % Select the transcription method
         problem.options(2).trapezoid.nGrid = 20;  %method-specific options
@@ -155,7 +157,8 @@ switch method
         problem.options(1).nlpOpt = optimset(...
             'Display','iter',...   % {'iter','final','off'}
             'TolFun',1e-4,...
-            'MaxFunEvals',1e5);   %options for fmincon
+            'MaxFunEvals',1e5, ...
+            'FinDiffRelStep', 1e-3); %options for fmincon 
         problem.options(1).verbose = 3; % How much to print out?
         problem.options(1).method = 'hermiteSimpson'; % Select the transcription method
         problem.options(1).hermiteSimpson.nSegment = 10;  %method-specific options
@@ -165,7 +168,8 @@ switch method
         problem.options(2).nlpOpt = optimset(...
             'Display','iter',...   % {'iter','final','off'}
             'TolFun',1e-6,...
-            'MaxFunEvals',1e6);   %options for fmincon
+            'MaxFunEvals',1e6, ...
+            'FinDiffRelStep', 1e-3); %options for fmincon 
         problem.options(2).verbose = 3; % How much to print out?
         problem.options(2).method = 'hermiteSimpson'; % Select the transcription method
         problem.options(2).hermiteSimpson.nSegment = 20;  %method-specific options
@@ -177,7 +181,8 @@ switch method
         problem.options(1).nlpOpt = optimset(...
             'Display','iter',...   % {'iter','final','off'}
             'TolFun',1e-3,...
-            'MaxFunEvals',15e5);   %options for fmincon
+            'MaxFunEvals',15e5, ...
+            'FinDiffRelStep', 1e-3); %options for fmincon 
         problem.options(1).verbose = 3; % How much to print out?
         problem.options(1).method = 'chebyshev'; % Select the transcription method
         problem.options(1).chebyshev.nColPts = 9;  %method-specific options
@@ -187,17 +192,18 @@ switch method
         problem.options(2).nlpOpt = optimset(...
             'Display','iter',...   % {'iter','final','off'}
             'TolFun',1e-8,...
-            'MaxFunEvals',15e5);   %options for fmincon
+            'MaxFunEvals',15e5, ...
+            'FinDiffRelStep', 1e-3); %options for fmincon 
         problem.options(2).verbose = 3; % How much to print out?
         problem.options(2).method = 'chebyshev'; % Select the transcription method
         problem.options(2).chebyshev.nColPts = 15;  %method-specific options
         
     case 'rungeKutta'
-        problem.options(1).nlpOpt = optimset('TolFun', 1e-3, 'MaxIter', 1e3, 'PlotFcns','optimplotfval', 'Display', 'iter'); % options for fmincon
+        problem.options(1).nlpOpt = optimset('TolFun', 1e-3, 'MaxIter', 1e3, 'PlotFcns','optimplotfval', 'Display', 'iter','FinDiffRelStep', 1e-3); %options for fmincon 
         problem.options(1).method = 'rungeKutta'; % Select the transcription method
         problem.options(1).defaultAccuracy = 'low';
         problem.options(1).verbose = 1; % How much to print out?
-        problem.options(2).nlpOpt = optimset('TolFun', 1e-5, 'MaxFunEvals', 1e5, 'MaxIter', 1e3, 'PlotFcns','optimplotfval', 'Display', 'iter'); % options for fmincon
+        problem.options(2).nlpOpt = optimset('TolFun', 1e-5, 'MaxFunEvals', 1e5, 'MaxIter', 1e3, 'PlotFcns','optimplotfval', 'Display', 'iter','FinDiffRelStep', 1e-3); %options for fmincon 
         problem.options(2).method = 'rungeKutta'; % Select the transcription method
         problem.options(2).defaultAccuracy = 'medium';
         problem.options(2).verbose = 1; % How much to print out?

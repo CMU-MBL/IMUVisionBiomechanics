@@ -37,7 +37,7 @@ kinematics_table = [t_cycle'; x_cycle'; y_cycle'; qt_cycle'; ...
 % Run Unconstrained Optimization for Kinematics
 optfunc = @(kins) UnconstrainedSimsCostFun(kins, t_cycle, imu_table, keypoint_table, doExperimentalData, chooseUnconstrainedTracking);
 kins_0 = kinematics_table(2:end,:);
-options = optimoptions('fmincon', 'Display', 'off', 'MaxIter', 1000, 'MaxFunEvals',1e6, 'PlotFcns','optimplotfval');
+options = optimoptions('fmincon', 'Display', 'off', 'MaxIter', 1000, 'MaxFunEvals',1e6, 'PlotFcns','optimplotfval','FiniteDifferenceStepSize', 1e-4);
 tstart = tic;
 [optimal_kinematics, optJ] = fmincon(optfunc, kins_0, [], [], [], [], [], [], [], options);
 RunTime = toc(tstart)
